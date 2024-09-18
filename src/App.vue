@@ -2,7 +2,9 @@
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <router-link class="navbar-brand" to="/">GPS MONITOREO RADA</router-link>
+        <router-link class="navbar-brand" to="/"
+          >GPS MONITOREO RADA</router-link
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -23,19 +25,37 @@
               <router-link class="nav-link" to="/about">Nosotros</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/services">Servicios</router-link>
+              <router-link class="nav-link" to="/services"
+                >Servicios</router-link
+              >
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/support">Soporte</router-link>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" @click="redirectToPlatform"
+                >Plataforma</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    
+
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    redirectToPlatform() {
+      window.location.href = 'https://173.212.253.142/login';
+    }
+  }
+};
+</script>
+
 
 <style>
 #app {
